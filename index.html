@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
-                        <img src="images/WhatsApp Image 2024-01-21 at 12.30.03.jpeg">
+                        <img src="images/IMG_2628.png">
                     </div>
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
@@ -114,10 +114,11 @@
                     <div>
                         <i class="fa-solid fa-cloud"></i>
                         <h2>Cloud Compute</h2>
+                        <p>I am fascinated by cloud computing because it offers unparalleled scalability, allowing businesses to seamlessly expand their infrastructure as needed. </p>
                     </div>
                     <div>
                         <i class="fa-solid fa-hard-drive"></i>
-                        <h2>Machine learning</h2>
+                        <h2>Machine Learning</h2>
                         <p>I love the math and theory as well as the Implementation.</p>
                         <a href="#">Learn more</a>
                     </div>
@@ -130,16 +131,19 @@
                     <div>
                         <i class="fa-solid fa-magnifying-glass-chart"></i>
                         <h2>Data Analytics</h2>
+                        <p>I love data analytics because it empowers me to derive valuable insights from vast and complex datasets. </p>
                         <a href="#">Learn more</a>
                     </div>
                     <div>
                         <i class="fa-solid fa-atom"></i>
                         <h2>Quantum Algorithms</h2>
+                        <p>Quantum computing intrigues me due to its potential to revolutionize computational power. </p>
                         <a href="#">Learn more</a>
                     </div>
                     <div>
                         <i class="fa-solid fa-brain"></i>
                         <h2>Artificial Neural Networks</h2>
+                        <p>I think artificial neural networks can mimic the complexity of the human brain, enabling machines to learn and make decisions autonomously.</p>
                         <a href="#">Learn more</a>
                     </div>
                     
@@ -168,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn"> See more!</a>
+                <a href="https://github.com/erick-rios" class="btn"> See more!</a>
             </div>
         </div>
         <div id="contact">
@@ -187,12 +191,13 @@
                         <a href="images/CV_erick_rios.pdf" download class="btn btn2"> Download CV</a>
                     </div>
                     <div class="contact-right">
-                        <form action="">
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="text" name="E-mail" placeholder="Your E-mail" required>
                             <textarea type="text" name="Message" rows="6" placeholder="Your Message"></textarea>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
+                        <span id="msg"></span>
                     </div>
                 </div>
             </div>
@@ -225,7 +230,28 @@
                 sideMenu.style.right = "-200px";
             }
         </script>
+
+        <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+        <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+        <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
         
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxKz3pqxk5-Eqw12_0q0yzxJJ9E003GeKqLWfiLETr1b3s7xMVHrsbvzr4hiU71gQjUPw/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent sucessfully!"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     </body>
 </html>
         
