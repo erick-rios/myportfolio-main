@@ -17,20 +17,21 @@
             <div class="container">
                 <nav>
                     <img src="images/logo.png" class="logo">
-                    <ul>
+                    <ul id="sideMenu">
                         <li> <a href="#">HOME</a></li>
                         <li><a href="#">ABOUT ME</a></li>
+                        <li><a href="#">AREAS OF INTEREST</a></li>
                         <li><a href="#">PORTFOLIO</a></li>
-                        <li><a href="#">PROJECTS</a></li>
                         <li><a href="#">CONTACT</a></li>
-
+                        <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                     </ul>
+                    <i class="fa-solid fa-bars" onclick="openMenu()"></i>
                 </nav>
                 <div class="header-text">
                     <p> Welcome to my World</p>
                     <h1>Hi, I'm <span>Erick</span></h1>
                     <p> a Data and Quantum Computer Scientist</p>
-                    <h1>based in <br>Mexico City, Mexico</h1>
+                    <h1>based in <br><span>Mexico City</span>, <span>Mexico</span></h1>
                 </div>
             </div>
         </div>
@@ -73,18 +74,18 @@
                         <div class="tab-contents" id="experience">
                             <ul>
                                 <li><span>DiDi Chuxing Technologies Co.</span>
-                                    <br><span>Dark Kitchen's Intern</span>
+                                    <br>Dark Kitchen's Intern
                                     <br><span>JUN 2023/ OCT 2023</span>
                                     <br>- Development of a Python algorithm to detect growth for the Dark Kitchens Division of DiDi LATAM. Implementation of models such as k-NN decision trees.
                                 </li>
 
                                 <li><span>Metropolitan Autonomous University </span>
-                                    <br><span>RESEARCH ASSISTANT</span>
+                                    <br>RESEARCH ASSISTANT
                                     <br><span>JUN 2022/ Present</span>
                                     <br>- Development of a Deep Neural Network for corrolating physical variables and topologies of a ferromagnetic material using the Ising Model 2D. Database cleaning. Implementation of linear and logarithmic regression model. Topological Data Analysis.
                                 </li>
                                 <li><span>INAOE</span>
-                                    <br><span>RESEARCH ASSISTANT</span>
+                                    <br>RESEARCH ASSISTANT
                                     <br><span>JUN 2022/JUL 2022</span>
                                     <br>- Numerical stud of the expansion of HII Regions. We implemented supercomputing facilitated by the National Laboratory of Supercomputing in South-eastern Mexico.
                                 </li>
@@ -146,8 +147,59 @@
             </div>
         </div>
         <!------ portfolio ------>
-        <div id="portfolio"></div>
-
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title"> My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/ISINGenerator(3).png" alt="">
+                        <div class="layer">
+                            <h3>ISINGenerator</h3>
+                            <p>An open source project. A library for creating a database that allows analyzing the energy, magnetization, the number of topological domains and the mean size of the topological domains in a square lattice of spins in a Ising Model of two dimensions. It is achieved using Monte Carlo simulation and implementing the Metropolis algorithm.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/covid.png" alt="">
+                        <div class="layer">
+                            <h3>COVID-19 MX</h3>
+                            <p>Analysis of correlation among previous health conditions and deaths for COVID-19 in mexican population. Development of an algorithm to predict the desease due to distintcs medical preconditions.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn"> See more!</a>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me!</h1>
+                        <p><i class="fa-solid fa-at"></i> erickds@gmail.com</p>
+                        <p><i class="fa-solid fa-phone-volume"></i> +(52) 9515871972</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=100063899083605"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/sogeki2309/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/erick-rios5872/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/erick-rios"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <a href="images/CV_erick_rios.pdf" download class="btn btn2"> Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form action="">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="text" name="E-mail" placeholder="Your E-mail" required>
+                            <textarea type="text" name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright <i class="fa-regular fa-copyright"></i> Erick Ríos. Made with HTML, CSS and JS.</p>
+            </div>
+        </div>
         <script>
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
@@ -161,6 +213,16 @@
                 }
                 event.currentTarget.classList.add("active-link");
                 document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        <script>
+            var sideMenu = document.getElementById("sideMenu");
+
+            function openMenu(){
+                sideMenu.style.right = "0";
+            }
+            function closeMenu(){
+                sideMenu.style.right = "-200px";
             }
         </script>
         
