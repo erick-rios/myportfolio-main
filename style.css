@@ -34,7 +34,7 @@ nav {
 }
 
 .logo {
-    width: 140px;
+    width: 40px;
 }
 
 nav ul li {
@@ -342,13 +342,13 @@ form .btn2{
 /*-----------------css for small screens-------------*/
 @media only screen and (max-width:600px){
     #header{
-        background-image: url(images/favicon.png);
-        background-size: 40%;
-        background-position: bottom right;
+        background-image: url(images/20240122_090626.png);
+        background-size: 600px;
+        background-position:  bottom right;
         background-repeat: no-repeat;
     }
     .header-text{
-        margin-top: 100%;
+        margin-top: 30%;
         font-size: 6px;
     }
     .header-text h1{
