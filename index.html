@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Erick Ríos || Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/157b9f6492.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul>
+                        <li> <a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT ME</a></li>
+                        <li><a href="#">PORTFOLIO</a></li>
+                        <li><a href="#">PROJECTS</a></li>
+                        <li><a href="#">CONTACT</a></li>
+
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p> Welcome to my World</p>
+                    <h1>Hi, I'm <span>Erick</span></h1>
+                    <p> a Data and Quantum Computer Scientist</p>
+                    <h1>based in <br>Mexico City, Mexico</h1>
+                </div>
+            </div>
+        </div>
+        <!-- about-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/WhatsApp Image 2024-01-21 at 12.30.03.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            I am a passionate individual with a strong background in data science and quantum computing.
+                        My journey in these fields has equipped me with the skills to tackle complex problems and extract meaningful insights from data.
+                        Whether it's analyzing datasets or delving into the intricacies of quantum algorithms, I thrive on challenges and continuous learning.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Development Skills</span>
+                                    <br>- Python    90%
+                                    <br>- Java      85%
+                                    <br>- R Project 79%
+                                    <br>- C++       80%
+                                    <br>- FORTRAN   90%
+                                </li>
+                                <li><span>Frameworks</span>
+                                    <br>- NumPy        95%
+                                    <br>- SciPy        89%
+                                    <br>- Pandas       90%
+                                    <br>- TensorFlow   80%
+                                    <br>- Scikit-Learn 86%
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>DiDi Chuxing Technologies Co.</span>
+                                    <br><span>Dark Kitchen's Intern</span>
+                                    <br><span>JUN 2023/ OCT 2023</span>
+                                    <br>- Development of a Python algorithm to detect growth for the Dark Kitchens Division of DiDi LATAM. Implementation of models such as k-NN decision trees.
+                                </li>
+
+                                <li><span>Metropolitan Autonomous University </span>
+                                    <br><span>RESEARCH ASSISTANT</span>
+                                    <br><span>JUN 2022/ Present</span>
+                                    <br>- Development of a Deep Neural Network for corrolating physical variables and topologies of a ferromagnetic material using the Ising Model 2D. Database cleaning. Implementation of linear and logarithmic regression model. Topological Data Analysis.
+                                </li>
+                                <li><span>INAOE</span>
+                                    <br><span>RESEARCH ASSISTANT</span>
+                                    <br><span>JUN 2022/JUL 2022</span>
+                                    <br>- Numerical stud of the expansion of HII Regions. We implemented supercomputing facilitated by the National Laboratory of Supercomputing in South-eastern Mexico.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>(2019 - 2024)</span>
+                                    <br> B.s. in Physics
+                                </li>
+                                <li><span>(2020 - 2024)</span>
+                                    <br> B.s. in Mathematics
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------ Areas of Interest----->
+        <div id="areas-interest">
+            <div class="container">
+                <h1 class="sub-title"> Areas of Interest</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-cloud"></i>
+                        <h2>Cloud Compute</h2>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-hard-drive"></i>
+                        <h2>Machine learning</h2>
+                        <p>I love the math and theory as well as the Implementation.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-sitemap"></i>
+                        <h2>Paralell Computing</h2>
+                        <p>I regularly run my algorithms on HPC. My latest open source project ran in the Supercomputer of Max Planck Institute.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <h2>Data Analytics</h2>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-atom"></i>
+                        <h2>Quantum Algorithms</h2>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-brain"></i>
+                        <h2>Artificial Neural Networks</h2>
+                        <a href="#">Learn more</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!------ portfolio ------>
+        <div id="portfolio"></div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+        
+            function opentab(event, tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabconten of tabcontents) {
+                    tabconten.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        
+    </body>
+</html>
+        
+ 
